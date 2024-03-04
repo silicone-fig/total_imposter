@@ -12,7 +12,6 @@ global.botInfo = {
   playerRole: process.env['PLAYER_ROLE']
 }
 global.playerInfo = [];
-global.handlerInfo = [];
 
 // Create a new client instance
 const client = new Client({
