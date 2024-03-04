@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, ActivityType } = require('discord.js');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -15,6 +15,9 @@ module.exports = {
     }
 
     botInfo.isGame = false;
-    await interaction.reply(`Game state changed to false: ${JSON.stringify(botInfo)}`);
+    await interaction.reply('The current round of Total Secrecy has ended.');
+
+    await interaction.client.user.setPresence({status: 'online'});
+    await interaction.client.user.setActivity(`/help`, { type: ActivityType.Listening });
   },
 };
