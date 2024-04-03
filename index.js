@@ -1,18 +1,13 @@
 const { createInterface } = require('node:readline');
 const fs = require('node:fs');
 const path = require('node:path');
-const { execSync } = require('child_process');
 const fetch = require('node-fetch');
-const { Client, Collection, Routes, GatewayIntentBits } = require('discord.js');
-const token = process.env['TOKEN'];
-global.botInfo = {
-  isGame: false,
-  announcementChannel: process.env['ANNOUNCEMENT_CHANNEL'],
-  adminRole: process.env['ADMIN_ROLE'],
-  playerRole: process.env['PLAYER_ROLE']
-}
-global.playerInfo = [];
+const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const { checkHeart, setHeart } = require('./lib/helpers');
 global.handlerInfo = [];
+global.heartInfo = {
+  time: 5000,
+};
 
 // Create a new client instance
 const client = new Client({
@@ -78,5 +73,7 @@ for (const file of eventFiles) {
   await client.login(token).catch((err) => {
     throw err
   });
-  
+
+  heartInfo.id = await setHeart();
+  heartInfo.interval = setInterval(checkHeart, heartInfo.time, client);
 })();

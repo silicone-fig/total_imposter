@@ -1,12 +1,12 @@
 {
-  "name": "total-secrecy",
+  "name": "total_secrecy",
   "private": true,
-  "version": "1.0.0",
-  "description": "A bot",
+  "version": "1.1.0",
+  "description": "The Discord adaptation of a popular social manipulation game",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hackermondev/discord-active-developer.git"
+    "url": "git+https://github.com/TurtleCode84/total_secrecy.git"
   },
   "scripts": {
     "start": "node ."
@@ -15,13 +15,14 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hackermondev/discord-active-developer/issues"
+    "url": "https://github.com/TurtleCode84/total_secrecy/issues"
   },
-  "homepage": "https://github.com/hackermondev/discord-active-developer#readme",
+  "homepage": "https://github.com/TurtleCode84/total_secrecy#readme",
   "dependencies": {
-    "discord.js": "^14.6.0",
-    "express": "^4.18.3",
-    "node-fetch": "^2.6.7",
+    "discord.js": "^14.14.1",
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0",
+    "node-fetch": "^2.7.0",
     "readline": "^1.3.0"
   }
 }
