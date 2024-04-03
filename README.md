@@ -11,3 +11,14 @@
 - `ADMIN_ROLE`, your server's admin role ID
 - `PLAYER_ROLE`, your server's player role ID
 - `ANNOUNCEMENT_CHANNEL`, the ID of the game announcement channnel in your server
+
+- ## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
